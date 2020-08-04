@@ -1,0 +1,29 @@
+def Insertion_Sort(arr, g):
+    for i in range(g, len(arr)):
+        key = arr[i]
+        j = i - g
+        while j >= 0 and key < arr[j]:
+            arr[j + g] = arr[j]
+            j -= g
+        arr[j + g] = key
+
+
+def Shell_Sort(arr):
+      # 生成逆序列表，即希尔排序的间隔
+    g = [lambda x, i=i: x * i + 1 for i in range(len(arr))]
+    temp = []
+    for f1 in g:
+        temp.append(f1(3))
+        
+    for i in temp[::-1]:
+        print(i)
+        Insertion_Sort(arr, i)
+        
+
+
+if __name__ == '__main__':
+    arr = [1, 3, 4, 54, 4, 7, 8]
+    Shell_Sort(arr)
+    print(arr)
+
+ 
