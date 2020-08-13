@@ -16,7 +16,7 @@ class Cat(object):
     @classmethod
     def show_info(cls, name):
         """ 显示猫的信息 """
-        # print('类的属性：{0}， 实例的属性： {1}'.format(cls.tag, cls.name))
+        print('类的属性：{0}， 实例的属性： {1}'.format(cls.tag, cls.name))
         return cls(name)
         # cat = Cat(name)
         # return cat

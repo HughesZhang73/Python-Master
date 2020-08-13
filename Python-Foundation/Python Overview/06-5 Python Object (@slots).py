@@ -67,3 +67,5 @@ if __name__ == '__main__':
     cat_white.name = 'ÍúÍú'
     print(cat_white.show_info)
 
+
+
