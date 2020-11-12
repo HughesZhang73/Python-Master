@@ -19,6 +19,15 @@ def log(func):
     return wrapper
 
 
+def log1(func):
+    def llll():
+        print("llllll")
+        func()
+        
+    return llll
+
+
+
 @log
 def test():
     print("另外一个测试装饰器的函数")
@@ -30,8 +39,14 @@ def hello():
     print("hello world")
 
 
+@log1
+def hh():
+    print("hh")
+
+
 if __name__ == '__main__':
-    hello()
-    test()
-    
+    # hello()
+    # test()
+
+    hh()
 

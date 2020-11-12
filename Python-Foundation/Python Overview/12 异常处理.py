@@ -16,5 +16,21 @@ def test_dicide():
         print(e)
 
 
+def test_file():
+    try:
+        f = open('test.txt', 'r')
+        rest = f.readlines()
+        print(rest)
+    except:
+        print('error')
+    finally:
+        try:
+            f.close()
+            print('closed')
+        except:
+            pass
+
 if __name__ == '__main__':
-    test_dicide()
+    # test_dicide()
+    
+    test_file()

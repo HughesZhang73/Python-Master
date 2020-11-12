@@ -71,20 +71,12 @@ class DoubleLinklist(object):
             self.tail_add_linklist(value)
         else:
             node = Node(value)
-            
-            # if self.is_empty():
-            #     self.head = node
-            # else:  # 链表不为空的时候
-            #     # 首先需要找到 key
-           
             temp = self.head
             count = 0
             while key - 1 > count:
                 count += 1
                 temp = temp.next
-
         # 找到的 key 后进行元素插入
-            
             node.prev = temp
             node.next = temp.next
             temp.next.prev = node
